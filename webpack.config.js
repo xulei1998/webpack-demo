@@ -8,6 +8,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.[contenthash].js'
   },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+  },
   plugins: [new HtmlWebpackPlugin({
       title: 'lucy的界面',  //修改index.html的title
       template: 'src/assets/index.html' //用src/assets/index.html为模板生成dist/index.html
