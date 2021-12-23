@@ -16,6 +16,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|svg|jpg|gif)$/,  //以这些结尾的
+        use: ["file-loader"]   //把文件变成文件路径
+      },
+      {
         test: /\.styl$/,    //文件以.styl结尾的
         loader: ["style-loader","css-loader","stylus-loader"],
       },
