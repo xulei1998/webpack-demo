@@ -16,6 +16,7 @@ module.exports = {
   ],
   module: {
     rules: [
+      ...base.module.rules,
       {
         test: /\.css$/i,  //正则表达式  $以css结尾 \.是转译  如果你的文件名为.css结尾 使用css-loader
         use: ["style-loader", "css-loader"],  
